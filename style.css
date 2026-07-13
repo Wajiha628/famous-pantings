@@ -1,0 +1,185 @@
+/* ===============================
+   Global Styles
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f1ea;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===============================
+   Header
+================================= */
+
+header {
+    background-color: #2d4059;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   Navigation
+================================= */
+
+nav {
+    background-color: #3f72af;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* ===============================
+   Main Content
+================================= */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    flex: 1 0 auto;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #2d4059;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul,
+ol {
+    margin-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ===============================
+   Images
+================================= */
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+    border: 4px solid #2d4059;
+    border-radius: 10px;
+}
+
+/* ===============================
+   Tables
+================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #999;
+}
+
+th {
+    background-color: #2d4059;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ===============================
+   Footer
+================================= */
+
+footer {
+    background-color: #2d4059;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: gold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   Responsive Design
+================================= */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        width: 95%;
+    }
+}

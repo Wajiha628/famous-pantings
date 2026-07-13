@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quiz-question {
+            margin-bottom: 25px;
+        }
+
+        .quiz-question p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .quiz-question label {
+            display: block;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+
+        #quiz-submit {
+            background-color: #2d4059;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #quiz-submit:hover {
+            background-color: #3f72af;
+        }
+
+        #quiz-result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .fact-list li {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Quiz &amp; Fun Facts</h1>
+    <p>Test what you know about famous paintings.</p>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="paintings.html">Famous Paintings</a></li>
+<li><a href="concepts.html">Key Concepts</a></li>
+<li><a href="quiz.html">Quiz</a></li>
+<li><a href="references.html">References</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+</nav>
+
+<main>
+
+<section>
+
+<h2>Fun Facts</h2>
+
+<ul class="fact-list">
+
+<li>Vincent van Gogh only sold one painting during his lifetime, yet today his work sells for millions of dollars.</li>
+
+<li>The Mona Lisa has no visible eyebrows, which some historians believe was simply the fashion of the time.</li>
+
+<li>The Scream exists in four different versions, created by Edvard Munch using paint, pastel, and crayon.</li>
+
+<li>The Starry Night was painted from memory and imagination, based on the view from Van Gogh's asylum window.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Take the Quiz</h2>
+
+<form id="quiz-form">
+
+<div class="quiz-question">
+<p>1. Who painted The Starry Night?</p>
+<label><input type="radio" name="q1" value="wrong"> Pablo Picasso</label>
+<label><input type="radio" name="q1" value="correct"> Vincent van Gogh</label>
+<label><input type="radio" name="q1" value="wrong"> Claude Monet</label>
+</div>
+
+<div class="quiz-question">
+<p>2. In what year was the Mona Lisa painted?</p>
+<label><input type="radio" name="q2" value="wrong"> 1889</label>
+<label><input type="radio" name="q2" value="correct"> 1503</label>
+<label><input type="radio" name="q2" value="wrong"> 1931</label>
+</div>
+
+<div class="quiz-question">
+<p>3. Which artist created The Scream?</p>
+<label><input type="radio" name="q3" value="correct"> Edvard Munch</label>
+<label><input type="radio" name="q3" value="wrong"> Salvador Dalí</label>
+<label><input type="radio" name="q3" value="wrong"> Leonardo da Vinci</label>
+</div>
+
+<div class="quiz-question">
+<p>4. Post-Impressionism is best known for its focus on:</p>
+<label><input type="radio" name="q4" value="correct"> Emotion, symbolism, and bold colors</label>
+<label><input type="radio" name="q4" value="wrong"> Photographic realism</label>
+<label><input type="radio" name="q4" value="wrong"> Black and white sketching</label>
+</div>
+
+<button type="submit" id="quiz-submit">Check Answers</button>
+
+<p id="quiz-result"></p>
+
+</form>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>This website was created as a class project for IT 3203 Web Development.</p>
+
+<p>
+<a href="https://ksuweb.github.io/IT3203/" target="_blank">
+IT 3203 Course Website
+</a>
+</p>
+
+</footer>
+
+<script>
+    document.getElementById('quiz-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var totalQuestions = 4;
+        var correctCount = 0;
+
+        for (var i = 1; i <= totalQuestions; i++) {
+            var selected = document.querySelector('input[name="q' + i + '"]:checked');
+            if (selected && selected.value === 'correct') {
+                correctCount++;
+            }
+        }
+
+        document.getElementById('quiz-result').textContent =
+            'You got ' + correctCount + ' out of ' + totalQuestions + ' correct!';
+    });
+</script>
+
+</body>
+
+</html>
