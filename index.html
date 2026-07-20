@@ -5,209 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Famous Paintings | Home</title>
-
-    <style>
-        /* ---------- General Styles ---------- */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f1e8;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* ---------- Header ---------- */
-
-        header {
-            background: linear-gradient(to right, #2d4059, #3f72af);
-            color: white;
-            text-align: center;
-            padding: 40px;
-        }
-
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 20px;
-        }
-
-        /* ---------- Navigation ---------- */
-
-        nav {
-            background-color: #112d4e;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-
-        nav li {
-            margin: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: .3s;
-        }
-
-        nav a:hover {
-            color: gold;
-        }
-
-        /* ---------- Main ---------- */
-
-        main {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px;
-            flex: 1 0 auto;
-        }
-
-        section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,.15);
-        }
-
-        h2 {
-            color: #2d4059;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #3f72af;
-            padding-bottom: 5px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        ul,
-        ol {
-            margin-left: 30px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        /* ---------- Image ---------- */
-
-        img {
-            width: 100%;
-            max-width: 700px;
-            display: block;
-            margin: 20px auto;
-            border-radius: 12px;
-            border: 5px solid #2d4059;
-        }
-
-        /* ---------- Table ---------- */
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th {
-            background: #2d4059;
-            color: white;
-            padding: 12px;
-        }
-
-        td {
-            padding: 12px;
-            border: 1px solid #ccc;
-            text-align: center;
-        }
-
-        tr:nth-child(even) {
-            background: #f3f3f3;
-        }
-
-        tr:hover {
-            background: #dbe9ff;
-        }
-
-        /* ---------- Footer ---------- */
-
-        footer {
-            background: #112d4e;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        footer a {
-            color: gold;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* ---------- Responsive ---------- */
-
-        @media (max-width: 700px) {
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            header h1 {
-                font-size: 30px;
-            }
-
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>🎨 Famous Paintings Through History</h1>
+    <h1>Famous Paintings Through History</h1>
     <p>Discover the masterpieces that shaped the world of art.</p>
 </header>
 
 <nav>
-
 <ul>
-
 <li><a href="index.html">Home</a></li>
 <li><a href="paintings.html">Famous Paintings</a></li>
+<li><a href="artists.html">The Artist</a></li>
 <li><a href="concepts.html">Key Concepts</a></li>
 <li><a href="quiz.html">Quiz</a></li>
 <li><a href="references.html">References</a></li>
 <li><a href="about.html">About</a></li>
-
 </ul>
-
 </nav>
 
 <main>
@@ -255,6 +72,7 @@ art history, painting techniques, and important concepts that help us appreciate
 
 <li><a href="index.html">Home</a></li>
 <li><a href="paintings.html">Famous Paintings</a></li>
+<li><a href="artists.html">The Artist</a></li>
 <li><a href="concepts.html">Key Concepts</a></li>
 <li><a href="quiz.html">Quiz</a></li>
 <li><a href="references.html">References</a></li>
@@ -268,14 +86,12 @@ art history, painting techniques, and important concepts that help us appreciate
 
 <h2>Featured Painting</h2>
 
-<img src="https://sanctuarymentalhealth.org/wp-content/uploads/2021/03/The-Starry-Night-1200x630-1.jpg.webp" alt="The Starry Night">
+<img src="images/starry-night.jpg" alt="The Starry Night">
 
 <p>
-
 <b>The Starry Night</b> was painted by Vincent van Gogh in 1889 while he lived in
 an asylum in Saint-Rémy, France. Today it is considered one of the greatest
 paintings ever created.
-
 </p>
 
 </section>
@@ -284,6 +100,7 @@ paintings ever created.
 
 <h2>Famous Paintings</h2>
 
+<div class="table-wrapper">
 <table>
 
 <tr>
@@ -327,6 +144,7 @@ paintings ever created.
 </tr>
 
 </table>
+</div>
 
 </section>
 
